@@ -13,6 +13,10 @@ class StaticPagesController < ApplicationController
   def about
   end
   
-   def contact
-   end
+  def contact
+  end
+   
+  def feed
+   @feed_items = Micropost.paginate(page: params[:page])
+  end
 end
